@@ -13,7 +13,7 @@ LabIndex = ENV['LabIndex'].to_i
 
   Vagrant.configure("2") do |config|
     config.vm.box = "SoNiKBooM/TCEWin7Hack"
-    config.vm.box_version = "1.1"
+    config.vm.box_version = "1.4"
     config.vm.communicator = "winrm"
     config.winrm.username = "IEUser"
     config.winrm.password = "Passw0rd!"
@@ -22,11 +22,9 @@ LabIndex = ENV['LabIndex'].to_i
     config.windows.set_work_network = true
     config.vm.network :forwarded_port, guest: 3389, host: 3389, id: "rdp", auto_correct: true
     config.vm.network :forwarded_port, guest: 22, host: 2222, id: "ssh", auto_correct: true
-
     config.vm.provision "shell", path: "./labfiles/#{Labs[LabIndex]}/#{Labs[LabIndex]}.ps1"
     config.vm.provision "shell", path: "./labfiles/disable-windows-defender.ps1"
     config.vm.provision "shell", path: "./labfiles/disable-UAC.ps1"
-    end
     config.vm.provision "shell", inline: "del C:/tmp/\*"
     config.vm.provision "shell", path: "./labfiles/Rearm.ps1"
     config.vm.provider "virtualbox" do |vb|
