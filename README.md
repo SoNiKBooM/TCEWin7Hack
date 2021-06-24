@@ -28,7 +28,7 @@ C:\> choco install virtualbox vagrant -y
 
 ### Running
 
-Once the repo .zip has been download, extract the contents to something like *C:\git\TCEWin7Hack-master\* then navigate to the directory in elevated **command line** and run the following:
+Once the repo .zip has been download, extract the contents to something like C:\git\TCEWin7Hack-master\ then navigate to the directory in elevated **command line** and run the following:
 
 ```
 
