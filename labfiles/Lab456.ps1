@@ -726,25 +726,29 @@
 
 # Lab 4
 
-New-Service -Name "Avast" -BinaryPathName '"C:\WINDOWS\System32\wcrmgr.exe"' -StartupType "Automatic"
-New-Service -Name "GaUpdate" -BinaryPathName '"C:\WINDOWS\System32\cmd.exe"' -StartupType "Automatic"
-New-Service -Name "UpdatesWindows" -BinaryPathName '"C:\WINDOWS\System32\.exe"' -StartupType "Automatic"
+[void] (New-Service -Name "Avast" -BinaryPathName '"C:\WINDOWS\System32\wcrmgr.exe"' -StartupType "Automatic")
+[void] (New-Service -Name "GaUpdate" -BinaryPathName '"C:\WINDOWS\System32\cmd.exe"' -StartupType "Automatic")
+[void] (New-Service -Name "UpdatesWindows" -BinaryPathName '"C:\WINDOWS\System32\.exe"' -StartupType "Automatic")
 
-Takeown /F "C:\Program Files\Windows Media Player\wmpnetwk.exe"
-icacls "C:\Program Files\Windows Media Player\wmpnetwk.exe" /grant 'Teacher:(F)'
+[void] (Takeown /F "C:\Program Files\Windows Media Player\wmpnetwk.exe")
+[void] (icacls "C:\Program Files\Windows Media Player\wmpnetwk.exe" /grant 'Teacher:(F)')
 
-Takeown /F "C:\Program Files\Google\Update\GoogleUpdate.exe"
-icacls "C:\Program Files\Google\Update\GoogleUpdate.exe" /grant 'Teacher:(F)'
+[void] (Takeown /F "C:\Program Files\Google\Update\GoogleUpdate.exe")
+[void] (icacls "C:\Program Files\Google\Update\GoogleUpdate.exe" /grant 'Teacher:(F)')
 
 # -----
 
 # Lab 5
 
 # C:\Program Files\OpenSSH\bin\netutils.dll - Target DLL
-Stop-Service -Force -Name OpenSSHd
-copy "c:\vagrant\tools\openssh.exe" "C:\Program Files\OpenSSH\bin\cygrunsrv.exe"
-icacls "C:\Program Files\OpenSSH\bin" /grant "Teacher:(F)"
+[void] (Stop-Service -Force -Name OpenSSHd)
+[void] (copy "c:\vagrant\tools\openssh.exe" "C:\Program Files\OpenSSH\bin\cygrunsrv.exe")
+[void] (icacls "C:\Program Files\OpenSSH\bin" /grant "Teacher:(F)")
 
 # Lab 6
 
 # Steam
+
+
+
+
