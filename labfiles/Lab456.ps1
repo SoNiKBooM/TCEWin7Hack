@@ -726,7 +726,7 @@
 
 # Lab 4
 
-New-Service -Name "avast" -BinaryPathName '"C:\WINDOWS\System32\wcrmgr.exe"' -StartupType "Automatic"
+New-Service -Name "Avast" -BinaryPathName '"C:\WINDOWS\System32\wcrmgr.exe"' -StartupType "Automatic"
 New-Service -Name "GaUpdate" -BinaryPathName '"C:\WINDOWS\System32\cmd.exe"' -StartupType "Automatic"
 New-Service -Name "UpdatesWindows" -BinaryPathName '"C:\WINDOWS\System32\.exe"' -StartupType "Automatic"
 
