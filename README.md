@@ -12,7 +12,7 @@ The following packages will need to be installed:
 
 ```
 
-Oracle Virtual Box - https://download.virtualbox.org/virtualbox/6.1.22/VirtualBox-6.1.22-144080-Win.exe
+Oracle Virtual Box
 Vagrant
 
 ```
@@ -38,9 +38,9 @@ C:\git\TCEWin7Hack> set LabIndex=0 && vagrant up
 
 The 'LabIndex' maps to the corresponding Lab file within the labs folder. There are powershell scripts that make various changes to the operating system within the the virtual machine. For your own benefit it is best not to read any echoes in the command line as this might give away what you are trying to achieve. It's an honesty system.
 
-The initial 'vagrant up' will pull down the 50Gb image off vagrant cloud, so go make a cup of coffee or get some fried chicken.
+The initial 'vagrant up' will pull down the 50Gb image off vagrant cloud, so go make a cup of coffee or get some dirty bird.
 
-Once you have verified that everything is work, you can change the lab index and proceed to the next one. 
+Once you have verified that everything is working, you can change the lab index and proceed to the next one. 
 
 ```
 
