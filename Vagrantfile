@@ -5,8 +5,8 @@ require 'getoptlong'
 # Switch between different Labs
 Labs = [
   "Lab0",       # 0 <default>
-  "Lab123",     # 1 
-  "Lab456",     # 2
+  "Lab1",     # 1 
+  "Lab2",     # 2
 ]
 
 #Change these flags to change labs
