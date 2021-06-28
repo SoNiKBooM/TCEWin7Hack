@@ -743,7 +743,8 @@
 # C:\Program Files\OpenSSH\bin\netutils.dll - Target DLL
 [void] (Stop-Service -Force -Name OpenSSHd)
 [void] (copy "c:\vagrant\tools\openssh.exe" "C:\Program Files\OpenSSH\bin\cygrunsrv.exe")
-[void] (icacls "C:\Program Files\OpenSSH\bin" /grant "Teacher:(F)")
+[void] ($env:Path += ";C:\Program Files\OpenOffice 4\program")
+[void] (icacls "C:\Program Files\OpenOffice 4\program" /grant "Teacher:(F)")
 
 # Lab 6
 
