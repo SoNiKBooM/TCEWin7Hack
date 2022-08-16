@@ -1482,6 +1482,7 @@
 [void] ($rule = New-Object System.Security.AccessControl.RegistryAccessRule ("Teacher","FullControl","Allow"))
 [void] ($acl.SetAccessRule($rule))
 [void] ($acl |Set-Acl -Path HKLM:\SYSTEM\CurrentControlSet\Services\OpenSSHd)
+[void] (cmd /c "sc sdset OpenSSHd D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;S-1-5-21-1716914095-909560446-1177810406-1005)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)")
 
 # -----
 
